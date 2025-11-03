@@ -1,0 +1,60 @@
+{
+  "expo": {
+    "name": "bolt-expo-nativewind",
+    "slug": "bolt-expo-nativewind",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "myapp",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.seuapp.bolt",
+      "config": {
+        "googleMapsApiKey": "$(process.env:EXPO_PUBLIC_GOOGLE_MAPS_API_KEY)"
+      },
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Este app precisa da sua localização para mostrar rotas e motoristas próximos.",
+        "NSLocationAlwaysUsageDescription": "Este app precisa da sua localização em segundo plano para acompanhar corridas."
+      }
+    },
+    "android": {
+      "package": "com.seuapp.bolt",
+      "config": {
+        "googleMaps": {
+          "apiKey": "$(process.env:EXPO_PUBLIC_GOOGLE_MAPS_API_KEY)"
+        }
+      },
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_BACKGROUND_LOCATION"
+      ]
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "single",
+      "favicon": "./assets/images/favicon.png",
+      "config": {
+        "googleMaps": {
+          "apiKey": "$(process.env:EXPO_PUBLIC_GOOGLE_MAPS_API_KEY)"
+        }
+      }
+    },
+    "plugins": [
+      "expo-router",
+      "expo-font",
+      "expo-web-browser",
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Precisamos da sua localização para mostrar motoristas próximos e traçar rotas."
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}

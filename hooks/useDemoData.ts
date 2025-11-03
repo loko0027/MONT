@@ -1,0 +1,20 @@
+@@ .. @@
+     origem: 'Rua das Flores, 123',
+     destino: 'Shopping Center Norte',
+-    tipo_servico: 'pessoa' as const,
++    tipo_servico: 'pessoa',
+     valor_estimado: 25.50,
+     valor_final: 23.80,
+@@ .. @@
+     origem: 'Av. Paulista, 1000',
+     destino: 'Rua Augusta, 500',
+-    tipo_servico: 'entrega' as const,
++    tipo_servico: 'mercadoria',
+     valor_estimado: 18.00,
+     valor_final: 19.20,
+@@ .. @@
+     origem: 'Centro da Cidade',
+     destino: 'Bairro Residencial',
+-    tipo_servico: 'retirada' as const,
++    tipo_servico: 'mercadoria',
+     valor_estimado: 32.75,
